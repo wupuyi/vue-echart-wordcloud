@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import VueEchartWordcloud from "./components/VueEchartWordcloud";
 export default {
   name: "app",
   data () {
@@ -98,9 +97,6 @@ export default {
         }
       ]
     };
-  },
-  components: {
-    VueEchartWordcloud
   }
 };
 </script>

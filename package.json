@@ -1,15 +1,10 @@
 {
   "name": "vue-echart-wordcloud",
   "description": "'vue和echarts文字云组件'",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "author": "Puyi wu",
   "license": "MIT",
-  "private": false,
-  "main": "dist/vue-echart-wordcloud.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wupuyi/vue-echart-wordcloud"
-  },
+  "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"

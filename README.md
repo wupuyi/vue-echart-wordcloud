@@ -15,11 +15,57 @@ npm install --save vue-echart-wordcloud
 在`main.js`中注册
 
 ``` javascript
-
+// 引入
 import Vue from 'Vue'
 import echartWordcloud from 'vue-echart-wordcloud'
 
 Vue.use(echartWordcloud)
+
+// 组件中使用
+<vue-echart-wordcloud></vue-echart-wordcloud>
+
+```
+
+## 配置
+
+```html
+
+<vue-echart-wordcloud
+    :chart-content="myWord"
+    :chart-width="800"
+    :chart-height="300"
+></vue-echart-wordcloud>
+
+```
+
+### Props说明
+
+|参数|作用|类型|必填|
+|-----|-----|-----|-----|
+|chart-content|文字云的内容|Array|必填|
+|chart-width|文字云宽度|Number|必填|
+|chart-height|文字云高度|Number|必填|
+
+#### data数据格式
+
+```javascript
+
+[
+    {
+        // name为文字云内容
+        name: "Sam S Club",
+        // value为文字云权重
+        value: 10000
+    },
+    {
+        name: "Macys",
+        value: 618
+    },
+    {
+        name: "Amy Schumer",
+        value: 4386
+    }
+]
 
 ```
 

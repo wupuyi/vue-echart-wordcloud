@@ -2,17 +2,27 @@
 
 > 'vue和echarts文字云组件'
 
-## Build Setup
+## 安装
 
 ``` bash
-# install dependencies
-npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
+npm install --save vue-echart-wordcloud
 
-# build for production with minification
-npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 使用
+
+在`main.js`中注册
+
+``` javascript
+
+import Vue from 'Vue'
+import echartWordcloud from 'vue-echart-wordcloud'
+
+Vue.use(echartWordcloud)
+
+```
+
+## License
+
+MIT

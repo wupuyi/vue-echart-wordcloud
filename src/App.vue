@@ -17,15 +17,18 @@ export default {
       myWord: [
         {
           name: "Sam S Club",
-          value: 10000
+          value: 10000,
+          itemStyle: '#FF83FA'
         },
         {
           name: "Macys",
-          value: 618
+          value: 618,
+          itemStyle: '#FFD700'
         },
         {
           name: "Amy Schumer",
-          value: 4386
+          value: 4386,
+          itemStyle: '#836FFF'
         }
       ]
     };

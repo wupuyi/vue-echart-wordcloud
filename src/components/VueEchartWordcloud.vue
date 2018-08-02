@@ -14,8 +14,8 @@ import "echarts/chart/wordCloud";
 export default {
   name: 'vue-echart-wordcloud',
   mounted () {
-    console.log(this.setChartContainer);
-    console.log(this.chartContent)
+    this.editChartData();
+    console.log(this.chartContent);
     this.drawChart();
   },
   methods: {
@@ -41,11 +41,26 @@ export default {
         }]
       };
       myChart.setOption(charCloudOption);
+    },
+    createItemStyle (color) {
+      return {
+        normal: {
+          color: color
+        }
+      }
+    },
+    editChartData () {
+      this.chartContent.forEach(item => {
+        if (item.itemStyle) {
+          let color = item.itemStyle;
+          item.itemStyle = this.createItemStyle(color);
+        }
+      })
     }
   },
   computed: {
     setChartContainer () {
-      return `width: ${this.chartWidth}px; height: ${this.chartHeight}px`
+      return `width: ${this.chartWidth}px; height: ${this.chartHeight}px`;
     }
   },
   props: {

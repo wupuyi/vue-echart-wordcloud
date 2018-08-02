@@ -55,15 +55,24 @@ Vue.use(echartWordcloud)
         // name为文字云内容
         name: "Sam S Club",
         // value为文字云权重
-        value: 10000
+        value: 10000,
+        // itemStyle是该文字颜色
+        itemStyle: '#FF83FA'
+    },
+    {
+        name: "Sam S Club",
+        value: 10000,
+        
     },
     {
         name: "Macys",
-        value: 618
+        value: 618,
+        itemStyle: '#FFD700'
     },
     {
         name: "Amy Schumer",
-        value: 4386
+        value: 4386,
+        itemStyle: '#836FFF'
     }
 ]
 

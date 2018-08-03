@@ -2,16 +2,15 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  // npm run dev时 demo调试的入口
-  // entry: './src/main.js',
-  entry: './src/index.js',
+  entry: './src/main.js',
+  // entry: './src/lib/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    // filename: 'build.js'
-    filename: 'vue-echart-wordcloud.js',  //打包生成文件的名字
-    library: 'VueEchartWordcloud',   //reqire引入的名字
-    libraryTarget: 'umd', // 同时以AMD、CommonJS和全局属性形式输出
+    filename: 'build.js',
+    // filename: 'vue-echart-wordcloud.js',
+    library: 'VueEchartWordcloud',
+    libraryTarget: 'umd',
     umdNamedDefine: true
   },
   module: {

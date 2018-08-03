@@ -1,18 +1,21 @@
 {
   "name": "vue-echart-wordcloud",
-  "description": "'vue和echarts文字云组件'",
-  "version": "1.0.1",
-  "author": "Puyi wu",
+  "description": "'vue和echarts结合的文字云'",
+  "version": "1.0.3",
+  "main": "dist/build.js",
+  "directories": {
+    "dist": "dist"
+  },
+  "author": "Puyi Wu",
   "license": "MIT",
   "private": false,
-  "mian": "dist/vue-echart-wordcloud.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wupuyi/vue-echart-wordcloud"
+    "url": "git+https://github.com/wupuyi/vue-echart-wordcloud.git"
   },
   "dependencies": {
     "echarts": "^2.2.8",

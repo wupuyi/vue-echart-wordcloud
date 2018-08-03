@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 // import echartWordcloud from './index'
-import VueEchartWordcloud from 'vue-echart-wordcloud'
+import VueEchartWordcloud from './lib/index.js'
 
 Vue.use(VueEchartWordcloud)
 

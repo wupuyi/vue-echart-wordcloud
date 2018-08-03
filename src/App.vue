@@ -10,10 +10,10 @@
 
 <script>
 export default {
-  name: "app",
+  name: 'app',
   data () {
     return {
-      msg: "Welcome to Your Vue.js App",
+      msg: 'Welcome to Your Vue.js App',
       myWord: [
         {
           name: "Sam S Club",
@@ -31,14 +31,14 @@ export default {
           itemStyle: '#836FFF'
         }
       ]
-    };
+    }
   }
-};
+}
 </script>
 
 <style lang="scss">
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -46,8 +46,7 @@ export default {
   margin-top: 60px;
 }
 
-h1,
-h2 {
+h1, h2 {
   font-weight: normal;
 }
 

@@ -4,7 +4,6 @@
       :chart-content="myWord"
       :textRotation="textRotation"
       :textMinSize="textMinSize"
-      :key=""
       :chart-width="800"
       :chart-height="800"
     ></vue-echart-wordcloud>

@@ -2,8 +2,10 @@
   <div id="app">
     <vue-echart-wordcloud
       :chart-content="myWord"
+      :textRotation="textRotation"
+      :textMinSize="textMinSize"
       :chart-width="800"
-      :chart-height="300"
+      :chart-height="800"
     ></vue-echart-wordcloud>
   </div>
 </template>
@@ -29,9 +31,15 @@ export default {
           name: "Amy Schumer",
           value: 4386,
           itemStyle: '#836FFF'
+        },
+        {
+          name:"ercjul",
+          value: 200
         }
-      ]
-    }
+      ],
+      textRotation: [0,45],
+      textMinSize: 5,
+    };
   }
 }
 </script>

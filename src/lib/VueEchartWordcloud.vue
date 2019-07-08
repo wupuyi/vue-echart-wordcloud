@@ -31,11 +31,11 @@ export default {
           type: 'wordCloud',
           // 文字云大小
           size: ['100%', '100%'],
-          textRotation: [0, 0],
+          textRotation: this.textRotation,
           textPadding: 0,
           autoSize: {
             enable: true,
-            minSize: 12
+            minSize: this.textMinSize
           },
           data: this.chartContent
         }]
@@ -45,7 +45,11 @@ export default {
     createItemStyle (color) {
       return {
         normal: {
-          color: color
+          color: color==undefined?'rgb(' + [
+                  Math.round(Math.random() * 160),
+                  Math.round(Math.random() * 160),
+                  Math.round(Math.random() * 160)
+              ].join(',') + ')':color
         }
       }
     },
@@ -78,6 +82,14 @@ export default {
     chartContent: {
       type: Array,
       required: true
+    },
+    textRotation:{
+      type: Array,
+      default: [-90,-45,0,45,90]
+    },
+    textMinSize:{
+      type: Number,
+      default: 12
     }
   }
 }

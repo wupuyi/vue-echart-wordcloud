@@ -24,6 +24,30 @@ export default {
       let myChart = echarts.init(document.querySelector('.chart'));
       // 配置选项
       let charCloudOption = {
+        itemStyle: {
+          normal: {
+            color: function () {
+              let color = "";
+              switch (colorType) {
+                case 0 : {
+                  let r = Math.floor(Math.random() * 225);
+                  let g = Math.floor(Math.random() * 225);
+                  let b = Math.floor(Math.random() * 225);
+                  color = "rgb(" + r + "," + g + "," + b + ")";
+                  break;
+                }
+                case 1 : {
+                  color = this.wordsColor;
+                  break;
+                }
+                default: {
+                  break;
+                }
+              }
+              return color;
+            }
+          }
+        },
         series: [{
           // 文字云名称
           name: 'word cloud',
@@ -90,6 +114,15 @@ export default {
     textMinSize:{
       type: Number,
       default: 12
+    },
+    // 文字云的文字的颜色
+    wordsColor: {
+      type: String
+    },
+    // 文字云的加载颜色的方案，0-随机颜色（此时词云组件的wordsColor不起作用），1-统一颜色（按照wordsColor颜色加载）
+    colorType: {
+      type: Number,
+      default: 0
     }
   }
 }
